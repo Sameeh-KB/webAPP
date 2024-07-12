@@ -15,11 +15,12 @@
 
         <div class="filter-container mb-4" style="justify-content: center; text-align: center;">
           <div class="form-check">
-            <input type="checkbox" id="haramFilter" [(ngModel)]="filters.haram" (change)="applyFilters()" class="form-check-input">
+            <input type="checkbox" id="haramFilter" [(ngModel)]="filters.haram" (change)="applyFilters(); search()" class="form-check-input">
             <label for="haramFilter" class="form-check-label" style="color: gray;">Exclude Haram Foods</label>
           </div>
           <div class="form-check mt-2">
-            <input type="checkbox" id="allergyFilter" [(ngModel)]="filters.allergy" (change)="applyFilters()" class="form-check-input">
+            <input type="checkbox" id="allergyFilter" [(ngModel)]="filters.allergy" (change)="applyFilters(); search()
+            " class="form-check-input">
             <label for="allergyFilter" class="form-check-label" style="color: gray;">Exclude Allergens</label>
           </div>
         </div>
