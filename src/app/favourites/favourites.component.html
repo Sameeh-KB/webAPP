@@ -1,0 +1,21 @@
+
+<!-- favorites.component.html -->
+<div class="favorites-container container">
+    <h2 class="text-center mb-4">My Favorites</h2>
+    <div class="row">
+      <div class="col-12 mb-4" *ngFor="let recipe of favoriteRecipes">
+        <div class="card recipe-card">
+          <img [src]="recipe.recipe.image" class="card-img-top" alt="{{ recipe.recipe.label }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.recipe.label }}</h5>
+            <p class="card-text card-calories">Calories: {{ recipe.recipe.calories | number: '1.1-1' }}</p>
+            <p class="card-text">Ingredients: {{ recipe.recipe.ingredientLines.join(', ') }}</p>
+            <button class="btn btn-favorite" (click)="removeFromFavorites(recipe)">
+              <i class="fas fa-heart-broken"></i> Remove from Favorites
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

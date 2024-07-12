@@ -1,0 +1,15 @@
+<div class="daily-recipe-container container" *ngIf="dailyRecipe">
+    <h2 class="text-center mb-4">Daily Recipe</h2>
+    <div class="card recipe-card">
+      <img [src]="dailyRecipe.recipe.image" class="card-img-top" alt="{{ dailyRecipe.recipe.label }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ dailyRecipe.recipe.label }}</h5>
+        <p class="card-text card-calories">Calories: {{ dailyRecipe.recipe.calories | number: '1.1-1' }}</p>
+        <p class="card-text">Ingredients: {{ dailyRecipe.recipe.ingredientLines.join(', ') }}</p>
+        <button class="btn btn-favorite" (click)="addToFavorites(dailyRecipe)">
+          <i class="fas fa-heart"></i> Add to Favorites
+        </button>
+      </div>
+    </div>
+  </div>
+  

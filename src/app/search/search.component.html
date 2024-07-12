@@ -1,0 +1,42 @@
+<!-- search.component.html -->
+
+<div class="search-container container">
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+      <div class="d-flex flex-column">
+        <div class="input-container d-flex mb-3">
+          <input type="text" class="form-control custom-input" [(ngModel)]="query" placeholder="Search for recipes" (keydown.enter)="search()">
+          <button class="btn btn-primary search-button" (click)="search()">
+            <i class="fas fa-search">
+              
+            </i>
+          </button>
+        </div>
+
+        <div class="filter-container mb-4" style="justify-content: center; text-align: center;">
+          <div class="form-check">
+            <input type="checkbox" id="haramFilter" [(ngModel)]="filters.haram" (change)="applyFilters()" class="form-check-input">
+            <label for="haramFilter" class="form-check-label" style="color: gray;">Exclude Haram Foods</label>
+          </div>
+          <div class="form-check mt-2">
+            <input type="checkbox" id="allergyFilter" [(ngModel)]="filters.allergy" (change)="applyFilters()" class="form-check-input">
+            <label for="allergyFilter" class="form-check-label" style="color: gray;">Exclude Allergens</label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-4" *ngFor="let recipe of recipes">
+          <div class="card recipe-card">
+            <a [routerLink]="['/recipe-details', recipe.recipe.uri.split('#')[1]]">
+              <img [src]="recipe.recipe.image" class="card-img-top" alt="{{ recipe.recipe.label }}">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">{{ recipe.recipe.label }}</h5>
+              <p class="card-text card-calories">Calories: {{ recipe.recipe.calories | number: '1.1-1' }}</p>
+              <p class="card-text">Ingredients: {{ recipe.recipe.ingredientLines.join(', ') }}</p>
+              <button class="btn btn-danger" (click)="addToFavorites(recipe)">Add to Favorites</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

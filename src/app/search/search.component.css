@@ -1,0 +1,131 @@
+/* search.component.css */
+
+/* Color Palette */
+:root {
+    --primary-color: #007bff; /* Bootstrap primary color */
+    --secondary-color: #6c757d; /* Bootstrap secondary color */
+    --background-color: #f8f9fa73; /* Light background color */
+    --card-bg-color: #ffffff; /* Card background color */
+    --card-border-color: #ff0909; /* Card border color */
+    --text-color: #333; /* Text color */
+    --title-color: #0056b3; /* Title color */
+  }
+  
+  /* Container and search input styling */
+  .search-container {
+    margin-top: 2rem;
+    background-color: var(--background-color);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Filter container styling */
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-container .form-check {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Search button styling */
+  .search-button {
+    margin-left: -1px; /* Adjust to fit nicely */
+    border-radius: 0 0.25rem 0.25rem 0; /* Rounded corners for the right side */
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3; /* Darken the primary color */
+  }
+  
+  .search-button i {
+    font-size: 1.2rem;
+  }
+  
+  /* Recipe card styling */
+  .recipe-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    object-fit: cover;
+    height: 300px; /* Increased height for images */
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    background-color: var(--card-bg-color);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--title-color);
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+  
+  /* Rounded calories */
+  .card-calories {
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+  /* Custom input styling */
+.custom-input {
+  background-color: #d7d7d7; /* Light grey background color */
+  color: rgb(105, 105, 105); /* White text color */
+}
+
+.custom-input::placeholder {
+  color:gray; /* Light grey color for placeholder text */
+}
+
+/* Optional: Adjust padding and border */
+.custom-input {
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  border-radius: 0.25rem; /* Optional: rounded corners */
+  border: 1px solid #ccc; /* Optional: border color */
+}
+/* Add to Favorites button */
+.btn-favorite {
+  background-color: #fe724c; /* Custom button background color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 0.25rem; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding */
+  font-size: 0.875rem; /* Font size */
+  display: flex; /* Align icon and text */
+  align-items: center; /* Center items vertically */
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.btn-favorite:hover {
+  background-color: #fe2724; /* Darker color on hover */
+}
+
+.btn-favorite i {
+  color: white; /* Icon color */
+}
+

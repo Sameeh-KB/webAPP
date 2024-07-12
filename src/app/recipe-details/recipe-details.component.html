@@ -1,0 +1,21 @@
+<!-- src/app/recipe-details/recipe-details.component.html -->
+
+<div *ngIf="recipeDetail" class="recipe-detail-container">
+  <div class="recipe-detail-header">
+    <h2>{{ recipeDetail.recipe.label }}</h2>
+    <img [src]="recipeDetail.recipe.image" alt="{{ recipeDetail.recipe.label }}" style="width: 500px; height: 500px;">
+  </div>
+  <div class="recipe-detail-info" style="justify-content: center; text-align: center;">
+    <p><strong>Calories:</strong> {{ recipeDetail.recipe.calories | number: '1.1-1' }}</p>
+    <p><strong>Total Time:</strong> {{ recipeDetail.recipe.totalTime }} minutes</p>
+    <p><strong>Yield:</strong> {{ recipeDetail.recipe.yield }} servings</p>
+    <h3>Ingredients:</h3>
+    <ul>
+      <li *ngFor="let ingredient of recipeDetail.recipe.ingredientLines">{{ ingredient }}</li>
+    </ul>
+    <h3>Instructions:</h3>
+    <ol>
+      <li *ngFor="let instruction of recipeDetail.recipe.instructions">{{ instruction }}</li>
+    </ol>
+  </div>
+</div>

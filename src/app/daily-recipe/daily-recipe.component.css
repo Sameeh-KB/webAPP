@@ -1,0 +1,79 @@
+/* Daily Recipe Page styles */
+.daily-recipe-container {
+    background-color: #fe724c; /* Light background color from the palette */
+    padding: 2rem; /* Padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+  }
+  
+  /* Title */
+  .daily-recipe-container h2 {
+    color: #ffffff; /* Dark text color from the palette */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 1.5rem; /* Space below the title */
+  }
+  
+  /* Recipe Card */
+  .recipe-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  /* Recipe Image */
+  .recipe-card .card-img-top {
+    max-height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Cover the area of the image */
+  }
+  
+  /* Card Body */
+  .recipe-card .card-body {
+    padding: 1rem; /* Padding inside the card */
+  }
+  
+  /* Card Title */
+  .recipe-card .card-title {
+    color: #272d2f; /* Dark text color */
+    font-size: 1.25rem; /* Font size */
+    margin-bottom: 0.5rem; /* Space below the title */
+  }
+  
+  /* Card Calories */
+  .recipe-card .card-calories {
+    color: #fe724c; /* Color for calories text */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 1rem; /* Space below the calories */
+  }
+  
+  /* Card Ingredients */
+  .recipe-card .card-text {
+    color: #6c757d; /* Slightly lighter text color for ingredients */
+    margin-bottom: 1.5rem; /* Space below the ingredients */
+  }
+  
+  /* Add to Favorites button */
+  .btn-favorite {
+    background-color: #fe724c; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 0.25rem; /* Rounded corners */
+    padding: 0.5rem 1rem; /* Padding */
+    font-size: 0.875rem; /* Font size */
+    display: flex; /* Align icon and text */
+    align-items: center; /* Center items vertically */
+    gap: 0.5rem; /* Space between icon and text */
+    margin-top: 1rem; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  /* Button Hover State */
+  .btn-favorite:hover {
+    background-color: #fe2724; /* Darker color on hover */
+  }
+  
+  /* Button Icon */
+  .btn-favorite i {
+    color: white; /* Icon color */
+  }
+  

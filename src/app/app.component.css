@@ -1,0 +1,62 @@
+/* Navbar background color */
+.bg-custom {
+  background-color: #272d2f !important; /* Dark background color */
+}
+
+/* Navbar text color */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fe724c; /* Custom text color */
+}
+
+/* Navbar text color on active link */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fe2724; /* Color for the active link */
+  font-weight: bold; /* Bold font weight for active link */
+}
+
+/* Navbar text color on hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fe2724; /* Custom color for hover */
+  text-decoration: underline; /* Underline text on hover */
+}
+
+/* Navbar brand title color */
+.navbar-brand h2 {
+  color: #fe724c; /* Custom color for the title */
+  font-weight: bold; /* Bold font weight */
+  font-size: 1.5rem; /* Font size */
+  margin-bottom: 0; /* Remove default margin */
+}
+
+/* Ensure items are aligned to the left */
+.navbar-nav {
+  margin-left: auto; /* Align items to the left of the navbar */
+  display: flex;
+  flex-direction: row; /* Display items in a row */
+}
+
+/* Remove any margin between nav items */
+.navbar-nav .nav-item {
+  margin: 0; /* Remove default margin */
+}
+
+/* Optional: Add some padding to the nav links */
+.navbar-nav .nav-link {
+  padding: 0 1rem; /* Add horizontal padding */
+}
+
+/* Ensure the footer sticks to the bottom */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+router-outlet {
+  flex: 1;
+}
+
+/* Optional: Add a background color for the main content area */
+.router-outlet {
+  background-color: #f8f9fa; /* Light background color for the main content */
+}
