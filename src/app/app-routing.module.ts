@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'favorite', component: FavoriteComponent },
   { path: 'home', component: HomeComponent },
   { path: 'recipe-details/:uri', component: RecipeDetailsComponent },
+  {path: '**', component:HomeComponent}
 
 ];
 
