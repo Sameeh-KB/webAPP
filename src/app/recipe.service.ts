@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Recipe } from './search/recipe.model';  // Import Recipe interface
+import { Recipe } from './search/recipe.model'; 
 
 interface SearchResponse {
   hits: Recipe[];
