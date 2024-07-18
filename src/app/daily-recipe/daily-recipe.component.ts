@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeApiService } from '../recipe-api.service';
-import { Recipe } from '../search/recipe.model'; // Adjust the import path as necessary
+import { Recipe } from '../search/recipe.model'; 
 
 @Component({
   selector: 'app-daily-recipe',
@@ -18,7 +18,7 @@ export class DailyRecipeComponent implements OnInit {
 
   loadDailyRecipe(): void {
     this.recipeService.getDailyRecipe().subscribe(response => {
-      this.dailyRecipe = response.hits[0]; // Assuming the response has a list of recipes
+      this.dailyRecipe = response.hits[0]; 
     });
   }
 

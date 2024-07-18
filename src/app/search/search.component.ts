@@ -39,7 +39,6 @@ export class SearchComponent {
   }
 
   private isHaram(recipe: Recipe): boolean {
-    // Example logic to check if the recipe contains haram ingredients
     const haramIngredients = ["pork", "pork products", "bacon", "ham", "lard", "gelatin derived from non-halal sources", "enzymes derived from non-halal sources", "rennet derived from non-halal sources", "alcohol", "beer", "wine", "whiskey", "vodka", "rum", "gin", "brandy", "tequila", "champagne", "intoxicants", "blood", "carrion", "meat not slaughtered according to Islamic law", "meat from carnivorous animals", "meat from animals with fangs", "meat from birds with talons", "amphibians (frogs, etc.)"];
     return recipe.recipe.ingredientLines.some((ingredient: string) =>
       haramIngredients.some(haram => ingredient.toLowerCase().includes(haram))
@@ -47,7 +46,6 @@ export class SearchComponent {
   }
 
   private hasAllergen(recipe: Recipe): boolean {
-    // Example logic to check if the recipe contains allergens
     const allergens = ["fish", "shellfish", "crustacean shellfish", "tree nuts", "peanuts", "wheat", "soy", "sesame", "mustard", "celery", "sulfites", "lupin"];
     return recipe.recipe.ingredientLines.some((ingredient: string) =>
       allergens.some(allergen => ingredient.toLowerCase().includes(allergen))
