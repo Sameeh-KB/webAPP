@@ -1,7 +1,7 @@
 // favorites.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { RecipeApiService } from '../recipe-api.service'; // Adjust the import path as necessary
+import { RecipeApiService } from '../recipe-api.service'; 
 
 @Component({
   selector: 'app-favorites',
@@ -9,7 +9,7 @@ import { RecipeApiService } from '../recipe-api.service'; // Adjust the import p
   styleUrls: ['./favourites.component.css']
 })
 export class FavoriteComponent implements OnInit {
-  favoriteRecipes: any[] = []; // Store favorite recipes
+  favoriteRecipes: any[] = []; 
 
   constructor(private recipeService: RecipeApiService) { }
 
@@ -23,6 +23,6 @@ export class FavoriteComponent implements OnInit {
 
   removeFromFavorites(recipe: any): void {
     this.recipeService.removeFavorite(recipe);
-    this.loadFavorites(); // Reload the list after removing
+    this.loadFavorites();
   }
 }
