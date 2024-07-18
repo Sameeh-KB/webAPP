@@ -1,4 +1,3 @@
-// favorites.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { RecipeApiService } from '../recipe-api.service'; 
